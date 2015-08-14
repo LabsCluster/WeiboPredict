@@ -16,3 +16,8 @@ Wiki:https://github.com/DGideas/WeiboPredict/wiki
 * <code>utrain.txt</code>训练用户列表(<code>45671</code>个)
 * <code>upredict.txt</code>预测用户列表(<code>24818</code>个)
 * 特别地，因为文件过大，并没有将官方提供的原始训练和预测文件同步到git上
+
+#关于作答
+* 如果提交结果均为0,0,0, 相关的准确率是33.815878%
+
+#33.815878%
