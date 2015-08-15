@@ -1,4 +1,4 @@
-# 新浪微博预测大赛DGideas开源仓库
+# 新浪微博预测大赛仓库
 比赛相关内容请见：http://tianchi.aliyun.com/competition/information.htm?spm=0.0.0.0.Uon8Tx&amp;raceId=5
 
 Wiki:https://github.com/DGideas/WeiboPredict/wiki
