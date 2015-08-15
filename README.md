@@ -1,7 +1,7 @@
 # 新浪微博预测大赛仓库
 比赛相关内容请见：http://tianchi.aliyun.com/competition/information.htm?spm=0.0.0.0.Uon8Tx&amp;raceId=5
 
-Wiki:https://github.com/DGideas/WeiboPredict/wiki
+###更多内容请见Wiki:https://github.com/DGideas/WeiboPredict/wiki
 
 #赛题数据备忘
 * 训练数据由<code>\t</code>依次分隔为：用户id, 微博id, 时间, 转发数, 评论数, 赞数, 内容
