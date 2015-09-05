@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 __author__='DGideas';
-#This is a free software with the help of Boxfish Education.
+#Document:https://github.com/DGideas/DGStorage/wiki
 
 class DGStorage:
 	def __init__(self,conf={}):
 		import os;
 		import sys;
 		
-		self.DGSTORAGE_VERSION='2.2'; # DataCollection Version
-		self.DGSTORAGE_CHARSET='utf8'; # Default Charset
-		self.DGSTORAGE_SINGLECOLLECTIONLIMIT=1024; # Determine every collection can put how many datas
-		self.DGSTORAGE_SEARCHRANGE=3; # Determine when find a avalible collection, how many collection can we find. None stands find all collection.
-		self.DGSTORAGE_SEARCHINDEXLIMIT=64; # Determine DGStorage can storage how many indexs for quick search.
-		self.DGSTORAGE_SEARCHCACHELIMIT=32; # Determine DGStorage can storage how many caches for quick responds.
-		self.DGSTORAGE_PROPCACHELIMIT=16; # Determine DGStorage can storage how many caches for quick sort.
-		self.DGSTORAGE_SAFETY=True; # Security settings, True not allowed access database out of the exec path.
+		self.DGSTORAGE_VERSION='2.2';
+		self.DGSTORAGE_CHARSET='utf8';
+		self.DGSTORAGE_SINGLECOLLECTIONLIMIT=1024;
+		self.DGSTORAGE_SEARCHRANGE=3;
+		self.DGSTORAGE_SEARCHINDEXLIMIT=32;
+		self.DGSTORAGE_SEARCHCACHELIMIT=32;
+		self.DGSTORAGE_PROPCACHELIMIT=32;
+		self.DGSTORAGE_SAFETY=True;
 		
 		self.DGSTORAGE_Name=None;
 		self.DGSTORAGE_TimeStamp='';
@@ -219,7 +219,7 @@ class DGStorage:
 				if line!='':
 					return line.split(",")[0];
 	
-	def sort(self,propItem,order="WORD",limit=5,skip=0):
+	def sort(self,propItem,order="ASC",limit=5,skip=0):
 		import urllib.parse;
 		import os;
 		propItem=str(propItem);
@@ -320,9 +320,12 @@ class DGStorage:
 			if findStatus==True:
 				break;
 			else:
-				return False;
-		self.uptmp();
-		return True;
+				continue;
+		if findStatus==True:
+			self.uptmp();
+			return True;
+		else:
+			return False;
 	
 	def setprop(self,uid,propItem,propValue):
 		import codecs;
